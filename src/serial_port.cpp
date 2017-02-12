@@ -31,6 +31,10 @@ bool SerialPort::isOpen( void ) {
   return port.is_open();
 }
 
+SerialPort::operator bool() const {
+  return port.is_open();
+}
+
 std::size_t SerialPort::available( void ) {
   uint32_t bytes_available = 0;
   if( port.is_open() ) {

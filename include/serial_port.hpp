@@ -22,6 +22,9 @@ public:
   // check whether the port is open
   bool isOpen( void );
 
+  // overloading bool()
+  explicit operator bool() const;
+
   // get available bytes in buffer
   std::size_t available( void );
 
